@@ -1,0 +1,15 @@
+{
+  "name": "hello_pm2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "repository": "git@github.com:heyset/hello_pm2.git",
+  "author": "heyset <c.inaciomatheus@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
