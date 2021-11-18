@@ -43,6 +43,10 @@ class BigArray {
   app.get('/secret', (_req, res) => {
     res.status(200).json({ message: `The SUPER secret is: ${SECRET}` });
   });
+
+  app.get('/blowup', (_req, _res) => {
+    process.exit(1);
+  })
   
   app.listen(PORT, () => {
     console.log(`Server is up on port ${PORT}.`);
