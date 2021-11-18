@@ -11,3 +11,12 @@ apps:
     env_prod:
       PORT: 8000
       SECRET: idkman
+  - name: shadow
+    script: ./shadow.js
+    exec_mode: cluster
+    instances: max
+    watch: true
+    max_memory_restart: 100M
+    env:
+      PORT: 4020
+    
