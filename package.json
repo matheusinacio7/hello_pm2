@@ -7,9 +7,11 @@
   "author": "heyset <c.inaciomatheus@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "pm2-runtime start ecosystem.config.yml",
+    "stop": "pm2-runtime stop all && pm2-runtime delete all"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pm2": "^5.1.2"
   }
 }
