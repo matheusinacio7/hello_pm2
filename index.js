@@ -2,6 +2,7 @@ import express from 'express';
 
 const app = express();
 const PORT = process.env.PORT || 3030;
+const SECRET = process.env.SECRET || 'not defined';
 
 const sleep = (time) => new Promise((resolve) => {
   setTimeout(() => {
@@ -37,7 +38,11 @@ class BigArray {
     myBigArray.increaseArraySizeBy(amount);
     console.log(`Increased array size by ${amount}`);
     res.status(200).json({ message: `Increased array size by ${amount}` });
-  })
+  });
+
+  app.get('/secret', (_req, res) => {
+    res.status(200).json({ message: `The SUPER secret is: ${SECRET}` });
+  });
   
   app.listen(PORT, () => {
     console.log(`Server is up on port ${PORT}.`);

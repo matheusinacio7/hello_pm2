@@ -5,3 +5,9 @@ apps:
     instances: max
     watch: true
     max_memory_restart: 100M
+    env_dev:
+      PORT: 3030
+      SECRET: VAMONESSAMAN
+    env_prod:
+      PORT: 8000
+      SECRET: idkman
